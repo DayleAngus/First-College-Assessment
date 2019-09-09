@@ -142,7 +142,7 @@ public class ControlPanel
                 {
                     scan = new Scanner(System.in);
                     this.userSelectedOption = scan.nextByte();
-                    this.menuOptions.get(userSelectedOption - 1).start();
+                    this.menuOptions.get(userSelectedOption - 1).addResponse(this.menuOptions.get(userSelectedOption - 1).start());
                     break;
                 } 
                 catch (Exception e) 
@@ -260,6 +260,7 @@ public class ControlPanel
     {
         this.stackTrace = setter;
     }
+    
     /**
      * Is thrown if there is an error in the Initialisation of the menu
      */
