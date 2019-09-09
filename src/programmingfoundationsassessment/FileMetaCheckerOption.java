@@ -16,7 +16,7 @@ import ControlPanel.ControlPanelOption;
  * on file meta-data.
  * @author Dayle Angus
  */
-public class FileMetaCheckerOption extends ControlPanelOption 
+public class FileMetaCheckerOption<T> extends ControlPanelOption<T> 
 {
     // Declare Variables
     private final ControlPanel cPanel;
@@ -34,7 +34,7 @@ public class FileMetaCheckerOption extends ControlPanelOption
     /**
      * start function is used by a control panel to begin the FileMetaCheckerOption
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Create a new Control Panel
         ControlPanel metaCheckerCP = new ControlPanel(this.cPanel.getAdministrator(), "METACHECKER");
@@ -60,6 +60,7 @@ public class FileMetaCheckerOption extends ControlPanelOption
         
         // returns the menu of the control panel that was used to initialise this object
         recurMenu();
+        return null;
     }
     
 }

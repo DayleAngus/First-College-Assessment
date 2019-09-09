@@ -15,7 +15,7 @@ import java.util.Scanner;
  * Allows the user to reset the operation timekeeper
  * @author Dayle Angus
  */
-public class ResetOperationTimekeeperOption extends ControlPanelOption
+public class ResetOperationTimekeeperOption<T> extends ControlPanelOption
 {
     /**
      * Constructor for ResetOperationTimekeeperOption
@@ -29,7 +29,7 @@ public class ResetOperationTimekeeperOption extends ControlPanelOption
     /**
      *  Allows this option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Declare variables
         Scanner scan;
@@ -63,6 +63,7 @@ public class ResetOperationTimekeeperOption extends ControlPanelOption
         
         // recur the menu that this option was called from 
         recurMenu();
+        return null;
     }
     
 }

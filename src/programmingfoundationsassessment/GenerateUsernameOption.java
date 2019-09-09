@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
  * @author Dayle Angus
  * @version 1.1
  */
-public class GenerateUsernameOption extends ControlPanelOption 
+public class GenerateUsernameOption<T> extends ControlPanelOption 
 {
     //Declare Variables
     private final ControlPanel cPanel;
@@ -106,7 +106,7 @@ public class GenerateUsernameOption extends ControlPanelOption
     /**
      * Used from the ControlPanel to start the GenerateUsernameOption
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         long startTime, endTime;
         double operationTime;
@@ -127,7 +127,7 @@ public class GenerateUsernameOption extends ControlPanelOption
                 cPanel.getAdministratorName(), operationTime/1000000);
 
         recurMenu();
-
+        return null;
     }
     
 }

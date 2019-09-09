@@ -14,7 +14,7 @@ import ControlPanel.ControlPanelOption;
  * A submenu which allows the user to select from a list of various options pertaining to operation times
  * @author Dayle Angus
  */
-public class OperationDataOption extends ControlPanelOption
+public class OperationDataOption<T> extends ControlPanelOption
 {
     // Declare Variables
     private final ControlPanel cPanel;
@@ -32,7 +32,7 @@ public class OperationDataOption extends ControlPanelOption
     /**
      * Allows this control panel option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Declare variables
         ControlPanel operationTimesCPanel = new ControlPanel(this.cPanel.getAdministrator(), "OPERATION DATA");
@@ -66,6 +66,7 @@ public class OperationDataOption extends ControlPanelOption
         
         // Recur the previous menu
         recurMenu();
+        return null;
     }
     
 }

@@ -23,7 +23,7 @@ import javax.swing.JFrame;
  * Allows the user to aquire statistics of file sizes within a directory using JFileChooser
  * @author Dayle Angus
  */
-public class FileMetaChecker_GetFromDirOption extends ControlPanelOption 
+public class FileMetaChecker_GetFromDirOption<T> extends ControlPanelOption 
 {
     // Declare variables
     private final ControlPanel cPanel;
@@ -45,7 +45,7 @@ public class FileMetaChecker_GetFromDirOption extends ControlPanelOption
      * Called from the control panel to begin operations
      */
     public @Override@SuppressWarnings("null") 
- void start() 
+ T start() 
     {
         // Declare variables
         long[] fileSizes;
@@ -129,6 +129,7 @@ public class FileMetaChecker_GetFromDirOption extends ControlPanelOption
 
         // Go back to the menu which this option was selected from
         recurMenu();
+        return null;
     }
 
     /**

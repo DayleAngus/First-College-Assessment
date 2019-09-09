@@ -14,7 +14,7 @@ import ControlPanel.ControlPanelOption;
  * Prints a list of all operations stored in the Operation Timekeeper
  * @author Dayle Angus
  */
-public class PrintAllOperationsOption extends ControlPanelOption
+public class PrintAllOperationsOption<T> extends ControlPanelOption
 {
     // Declare Variables
     private String[] operationList;
@@ -33,7 +33,7 @@ public class PrintAllOperationsOption extends ControlPanelOption
     /**
      * Allows this option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Declare variables
         long startTime, endTime;
@@ -65,6 +65,7 @@ public class PrintAllOperationsOption extends ControlPanelOption
         
         // Recur the menu that this option was called from
         recurMenu();
+        return null;
     }
     
 }

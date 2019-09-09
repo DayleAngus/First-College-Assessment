@@ -14,7 +14,7 @@ import ControlPanel.ControlPanelOption;
  * Prints statistics found by the operation timekeeper
  * @author Dayle Angus
  */
-public class PrintOperationStatisticsOption extends ControlPanelOption
+public class PrintOperationStatisticsOption<T> extends ControlPanelOption
 {
     /**
      * Constructor for printOperationStatisticsOption
@@ -28,7 +28,7 @@ public class PrintOperationStatisticsOption extends ControlPanelOption
     /**
      * Allows this option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Option title
         System.out.println("\nOPERATION STATISTICS\n");
@@ -49,6 +49,7 @@ public class PrintOperationStatisticsOption extends ControlPanelOption
         
         // recur the menu that this option was called from
         recurMenu();
+        return null;
     }
     
 }

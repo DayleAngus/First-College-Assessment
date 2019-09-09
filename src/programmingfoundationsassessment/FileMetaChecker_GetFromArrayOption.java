@@ -16,7 +16,7 @@ import java.util.Scanner;
  * Allows the user to enter an array of integers for various operations to be performed
  * @author Dayle Angus
  */
-public class FileMetaChecker_GetFromArrayOption extends ControlPanelOption{
+public class FileMetaChecker_GetFromArrayOption<T> extends ControlPanelOption{
 
     // Declare Variables
     private final ControlPanel cPanel;
@@ -36,7 +36,7 @@ public class FileMetaChecker_GetFromArrayOption extends ControlPanelOption{
     /**
      * Allows this option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Declare variables
         String userInput;
@@ -94,6 +94,7 @@ public class FileMetaChecker_GetFromArrayOption extends ControlPanelOption{
         System.out.println("The average file size is : " + (total/fileSizes.length)+ "Mb");
         System.out.println("Total time of Statistical Evaluation : " + (operationTime) + " Nanoseconds");
         recurMenu();
+        return null;
     }
     
 }

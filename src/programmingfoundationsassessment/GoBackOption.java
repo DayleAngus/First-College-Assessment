@@ -14,7 +14,7 @@ import ControlPanel.ControlPanelOption;
  * Allows the user to return to a previous menu
  * @author Dayle Angus
  */
-public class GoBackOption extends ControlPanelOption
+public class GoBackOption<T> extends ControlPanelOption
 {
     /**
      * Constructor for GoBackOption
@@ -28,12 +28,13 @@ public class GoBackOption extends ControlPanelOption
     /**
      * allows this option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         /*
         This method is empty.
         Because it does not contain a recurMenu function it will return to the previous menu
         */
+        return null;
     }
     
 }

@@ -15,7 +15,7 @@ import ControlPanel.ControlPanelOption;
  * Control Panel Option that quits the program
  * @author Dayle Angus
  */
-public class QuitOption extends ControlPanelOption
+public class QuitOption<T> extends ControlPanelOption
 {
     //Declare Variables
     private final ControlPanel cPanel;
@@ -35,9 +35,10 @@ public class QuitOption extends ControlPanelOption
     /**
      * Used from the ControlPanel to start the QuitOption
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         System.exit(0);
+        return null;
     }
     
 }

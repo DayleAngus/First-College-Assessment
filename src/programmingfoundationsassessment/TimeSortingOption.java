@@ -15,7 +15,7 @@ import java.util.Scanner;
  * Allows the sorting of a list of operation times entered by the user
  * @author Dayle Angus
  */
-public class TimeSortingOption extends ControlPanelOption
+public class TimeSortingOption<T> extends ControlPanelOption
 {
     // Declare variables
     private Scanner scan;
@@ -34,7 +34,7 @@ public class TimeSortingOption extends ControlPanelOption
     /**
      * Allows this option to be selected from a control panel
      */
-    public @Override void start() 
+    public @Override T start() 
     {
         // Declare variables
         String userInput;
@@ -92,6 +92,7 @@ public class TimeSortingOption extends ControlPanelOption
         System.out.println("The Longest Operation is " + sortedTimes[sortedTimes.length - 1]+ " Seconds");
         System.out.println("Total time to Sort : " + operationTime + " Nanoseconds");
         recurMenu();
+        return null;
     }
     
     /**
